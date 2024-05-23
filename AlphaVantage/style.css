@@ -1,0 +1,154 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+
+#background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.title p {
+  margin: 10px 0 0;
+  font-size: 24px;
+}
+
+#wrapper {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 80%;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#toolbar {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+select, input {
+  padding: 10px;
+  font-size: 14px;
+}
+
+#quote table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #737373;
+  color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #555;
+  font-weight: bold;
+}
+
+.results-grid {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #background-image {
+      height: 400px;
+  }
+
+  .title h1 {
+      font-size: 36px;
+  }
+
+  .title p {
+      font-size: 18px;
+  }
+
+  #wrapper {
+      top: 50%;
+      padding: 10px;
+  }
+
+  #quote table {
+      font-size: 12px;
+  }
+}
+
+#chart-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
